@@ -104,6 +104,7 @@
             display: flex;
             gap: 1rem;
             align-items: center;
+            order: 2; /* Default order */
         }
 
         .social-icons a img {
@@ -122,8 +123,23 @@
             border-radius: 50%;
             object-fit: cover;
             box-shadow: var(--shadow);
+            order: 3; /* Default order */
         }
 
+        /* Responsive adjustments for header layout */
+        @media (max-width: 768px) {
+            .header-main {
+                width: 100%;
+                order: 1;
+            }
+            .social-icons {
+                order: 3;
+            }
+            .profile-photo {
+                order: 2;
+            }
+        }
+        
         /* Projects Section */
         .projects {
             margin-bottom: 3rem;
@@ -209,11 +225,13 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0, 0, 0, 0.8);
             display: none;
             justify-content: center;
             align-items: center;
             z-index: 1000;
+            padding: 1rem;
+            box-sizing: border-box;
         }
 
         .modal-content {
@@ -223,6 +241,7 @@
             background: #fff;
             padding: 20px;
             border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
         
         .modal-content img {
@@ -230,7 +249,8 @@
             width: 100%;
             height: auto;
             max-height: 80vh;
-            pointer-events: none; /* Disables click/drag on the image itself */
+            pointer-events: none; /* Disables right-click menu on the image */
+            user-select: none; /* Prevents text selection */
         }
         
         .modal-close {
@@ -268,7 +288,7 @@
                 <img src="https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/OA%20LOGO.png" alt="OA personal logo" class="personal-logo">
                 <div class="header-text">
                     <h1>Olugbenga Asaolu</h1>
-                    <p>Senior Data Science & AI Specialist</p>
+                    <p>Senior Data Science &amp; AI Specialist</p>
                 </div>
             </div>
              <div class="social-icons">
@@ -414,20 +434,28 @@
             document.querySelectorAll('.certificate-link').forEach(link => {
                 link.addEventListener('click', function() {
                     const imgSrc = this.getAttribute('data-src');
-                    modalImage.src = imgSrc;
+                    modalImage.setAttribute('src', imgSrc);
                     modal.style.display = 'flex';
                 });
             });
 
             function closeModal() {
                 modal.style.display = 'none';
-                modalImage.src = ''; // Clear image src
+                modalImage.setAttribute('src', ''); // Clear image src to free memory
             }
 
             closeBtn.addEventListener('click', closeModal);
             
+            // Close modal by clicking on the overlay
             modal.addEventListener('click', function(event) {
                 if (event.target === modal) {
+                    closeModal();
+                }
+            });
+            
+            // Close modal with the Escape key
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
                     closeModal();
                 }
             });
