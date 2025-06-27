@@ -1,410 +1,438 @@
-\<\!DOCTYPE html\>
-\<html lang="en"\>
-\<head\>
-\<meta charset="UTF-8"\>
-\<meta name="viewport" content="width=device-width, initial-scale=1.0"\>
-\<title\>Olugbenga Asaolu – Senior Data Science & AI Specialist Portfolio\</title\>
-\<style\>
-:root {
-\--background-color: \#f7f9fc;
-\--card-background-color: \#ffffff;
-\--text-color: \#333333;
-\--muted-text-color: \#6c757d;
-\--primary-color: \#0056b3;
-\--border-radius: 8px;
-\--shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-\--transition-speed: 0.2s;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olugbenga Asaolu – Senior Data Science & AI Specialist Portfolio</title>
+    <style>
+        :root {
+            --background-color: #f7f9fc;
+            --card-background-color: #ffffff;
+            --text-color: #333333;
+            --muted-text-color: #6c757d;
+            --primary-color: #0056b3;
+            --border-radius: 8px;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --transition-speed: 0.2s;
+        }
 
-```
-    html {
-        scroll-behavior: smooth;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        background-color: var(--background-color);
-        color: var(--text-color);
-        line-height: 1.6;
-        margin: 0;
-        padding: 0;
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
 
-    main {
-        max-width: 1200px;
-        margin: 2rem auto;
-        padding: 0 1rem;
-    }
+        main {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
 
-    h1, h2, h3 {
-        margin-top: 0;
-        line-height: 1.2;
-    }
+        h1, h2, h3 {
+            margin-top: 0;
+            line-height: 1.2;
+        }
 
-    h1 {
-        font-size: 2.5rem;
-    }
+        h1 {
+            font-size: 2.5rem;
+        }
 
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-        border-bottom: 2px solid #e0e0e0;
-        padding-bottom: 0.5rem;
-    }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+        }
 
-    h3 {
-        font-size: 1.25rem;
-        margin-bottom: 0.75rem;
-    }
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
 
-    a {
-        color: var(--primary-color);
-        text-decoration: none;
-    }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
 
-    p {
-        margin-top: 0;
-        margin-bottom: 1rem;
-    }
+        p {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
 
-    /* Header */
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 1.5rem;
-        padding: 2rem 0;
-        margin-bottom: 1rem;
-        border-bottom: 1px solid #ddd;
-    }
+        /* Header */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding: 2rem 0;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
 
-    .header-main {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        flex-grow: 1;
-    }
-    
-    .personal-logo {
-        height: 60px;
-        width: auto;
-    }
-
-    .header-text h1 {
-        margin-bottom: 0.25rem;
-    }
-
-    .header-text p {
-        font-size: 1.2rem;
-        color: var(--muted-text-color);
-        margin: 0;
-    }
-    
-    /* MODIFICATION: Added styles for the new social media icons in the header */
-    .social-icons {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-    }
-    .social-icons a {
-        display: inline-block;
-        transition: transform var(--transition-speed);
-    }
-    .social-icons a:hover {
-        transform: scale(1.1);
-    }
-    .social-icons svg {
-        width: 32px;
-        height: 32px;
-    }
-
-    .profile-photo {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        box-shadow: var(--shadow);
-    }
-
-    .logos {
-        display: flex;
-        flex-basis: 100%;
-        gap: 2rem;
-        align-items: center;
-        justify-content: flex-start;
-        margin-top: 1rem;
-    }
-
-    .logos img {
-        max-height: 40px;
-        width: auto;
-        filter: grayscale(80%);
-        opacity: 0.8;
-        transition: filter var(--transition-speed), opacity var(--transition-speed);
-    }
-
-    .logos img:hover {
-        filter: grayscale(0%);
-        opacity: 1;
-    }
-    
-    /* Projects Section */
-    .projects {
-        margin-bottom: 3rem;
-    }
-    .project-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .project-card {
-        background-color: var(--card-background-color);
-        border-radius: var(--border-radius);
-        box-shadow: var(--shadow);
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .project-card-content {
-        padding: 1.5rem;
-        flex-grow: 1;
-    }
-    
-    .project-card img,
-    .project-card video {
-        width: 100%;
-        height: 220px; /* MODIFICATION: Set a fixed height for uniform card appearance */
-        object-fit: cover; /* MODIFICATION: Ensure images cover the area without distortion */
-        display: block;
-        background-color: #e0e0e0;
-    }
-    
-    .project-card h3 a {
-        color: var(--text-color);
-    }
-    
-    .project-card h3 a:hover {
-        text-decoration: underline;
-    }
-    
-    .project-card p {
-        font-size: 0.95rem;
-        margin-bottom: 0.5rem;
-    }
-    
-    .project-card p:last-child {
-        margin-bottom: 0;
-    }
-    
-    /* Certificates Section */
-    .certificates {
-        margin-bottom: 3rem;
-    }
-    
-    /* MODIFICATION: Updated styles for the new embedded certificate grid */
-    .certificate-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        gap: 1.5rem;
-    }
-
-    .certificate-item {
-        background-color: var(--card-background-color);
-        border-radius: var(--border-radius);
-        box-shadow: var(--shadow);
-        overflow: hidden;
-        padding: 1rem;
-    }
-    
-    .certificate-item img {
-        width: 100%;
-        height: auto;
-        border-radius: calc(var(--border-radius) - 4px);
-        /* MODIFICATION: Added CSS to discourage saving the image */
-        pointer-events: none;
-    }
-
-    /* Footer */
-    footer {
-        text-align: center;
-        padding: 2rem 0;
-        margin-top: 2rem;
-        font-size: 0.9rem;
-        color: var(--muted-text-color);
-    }
-</style>
-```
-
-\</head\>
-\<body\>
-
-```
-<main>
-    <header>
-        <div class="header-main">
-            <img src="[https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/OA%20LOGO.png](https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/OA%20LOGO.png)" alt="OA personal logo" class="personal-logo">
-            <div class="header-text">
-                <h1>Olugbenga Asaolu</h1>
-                <p>Senior Data Science &amp; AI Specialist</p>
-            </div>
-        </div>
+        .header-main {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-grow: 1;
+        }
         
-        <div class="social-icons">
-            <a href="[https://www.linkedin.com/in/dr-olugbenga-asaolu/](https://www.linkedin.com/in/dr-olugbenga-asaolu/)" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-                <svg viewBox="0 0 24 24" fill="#0077B5" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zm1.777 13.019H3.552V9h3.562v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
-            </a>
-            <a href="[https://scholar.google.com/citations?user=caS8KwsAAAAJ&hl=en&oi=ao](https://scholar.google.com/citations?user=caS8KwsAAAAJ&hl=en&oi=ao)" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar Profile">
-                <svg viewBox="0 0 24 24" fill="#4285F4" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"><path d="M5.242 13.769L0 9.5L12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5s-5.548 1.749-6.758 4.269zM12 10.47a3.53 3.53 0 1 1 0 7.06 3.53 3.53 0 0 1 0-7.06z"/></svg>
-            </a>
-            <a href="[https://github.com/gbengasaolu](https://github.com/gbengasaolu)" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-                <svg viewBox="0 0 24 24" fill="#333" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-            </a>
-        </div>
+        .personal-logo {
+            height: 60px;
+            width: auto;
+        }
 
-        <img src="[https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/Gbenga%20Asaolu%20Serious%20Pose%201_May%202023.jpeg](https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/Gbenga%20Asaolu%20Serious%20Pose%201_May%202023.jpeg)" alt="A photo of Olugbenga Asaolu" class="profile-photo">
+        .header-text h1 {
+            margin-bottom: 0.25rem;
+        }
+
+        .header-text p {
+            font-size: 1.2rem;
+            color: var(--muted-text-color);
+            margin: 0;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .social-icons a img {
+            height: 32px;
+            width: 32px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .social-icons a:hover img {
+            transform: scale(1.1);
+        }
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: var(--shadow);
+        }
+
+        /* Projects Section */
+        .projects {
+            margin-bottom: 3rem;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background-color: var(--card-background-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
         
-        <div class="logos">
-            <img src="[https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/graph_courses_logo.png](https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/graph_courses_logo.png)" alt="Graph Courses Logo">
-            <img src="[https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/accelebrate%20logo.png](https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/accelebrate%20logo.png)" alt="Accelebrate Logo">
-            <img src="[https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dataleadafrica%20logo.png](https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dataleadafrica%20logo.png)" alt="Data Lead Africa Logo">
+        .project-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .project-card img,
+        .project-card video {
+            width: 100%;
+            height: 220px; /* Fixed height for visual consistency */
+            object-fit: cover; /* Cover the area, may crop */
+            display: block;
+            background-color: #e0e0e0;
+        }
+        
+        .project-card h3 a {
+            color: var(--text-color);
+        }
+        
+        .project-card h3 a:hover {
+            text-decoration: underline;
+        }
+        
+        .project-card p {
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .project-card p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Certificates Section */
+        .certificates {
+            margin-bottom: 3rem;
+        }
+
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+
+        .certificate-link {
+            display: block;
+            padding: 1rem 1.5rem;
+            background-color: var(--card-background-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: transform var(--transition-speed) ease-in-out, box-shadow var(--transition-speed) ease-in-out;
+            text-align: center;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        
+        .certificate-link:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Certificate Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            background: #fff;
+            padding: 20px;
+            border-radius: var(--border-radius);
+        }
+        
+        .modal-content img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 80vh;
+            pointer-events: none; /* Disables click/drag on the image itself */
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            color: #333;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border: 1px solid #ccc;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: var(--muted-text-color);
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <header>
+            <div class="header-main">
+                <img src="https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/OA%20LOGO.png" alt="OA personal logo" class="personal-logo">
+                <div class="header-text">
+                    <h1>Olugbenga Asaolu</h1>
+                    <p>Senior Data Science & AI Specialist</p>
+                </div>
+            </div>
+             <div class="social-icons">
+                <a href="https://www.linkedin.com/in/dr-olugbenga-asaolu/" target="_blank" rel="noopener" title="LinkedIn">
+                    <img src="https://raw.githubusercontent.com/gbengasaolu/onepager/main/icon_linkedin.svg" alt="LinkedIn Profile">
+                </a>
+                <a href="https://scholar.google.com/citations?user=caS8KwsAAAAJ&hl=en&oi=ao" target="_blank" rel="noopener" title="Google Scholar">
+                    <img src="https://raw.githubusercontent.com/gbengasaolu/onepager/main/icon_googlescholar.svg" alt="Google Scholar Profile">
+                </a>
+                <a href="https://github.com/gbengasaolu" target="_blank" rel="noopener" title="GitHub">
+                    <img src="https://raw.githubusercontent.com/gbengasaolu/onepager/main/icon_github.svg" alt="GitHub Profile">
+                </a>
+            </div>
+            <img src="https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/Gbenga%20Asaolu%20Serious%20Pose%201_May%202023.jpeg" alt="A photo of Olugbenga Asaolu" class="profile-photo">
+        </header>
+
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project-grid">
+                
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dash_global_hiv.png" alt="Global HIV/AIDS Epidemiology Explorer Dashboard Screenshot">
+                    <div class="project-card-content">
+                        <h3><a href="https://gbengasaolu.github.io/GLOBAL_HIV_AIDS_ANALYSIS/" target="_blank" rel="noopener">Global HIV/AIDS Epidemiology Explorer</a></h3>
+                         <p><strong>Date:</strong> Jul 2024</p>
+                        <p><strong>Objective:</strong> To visualize critical HIV/AIDS epidemiological trends, including prevalence, incidence, and treatment coverage, on a regional and global scale.</p>
+                        <p><strong>Skills &amp; Tools:</strong> R, Leaflet, Plotly</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dash_china_influenza.png" alt="H7N9 ‘China Flu’ 2013 Outbreak Analysis Screenshot">
+                    <div class="project-card-content">
+                        <h3><a href="https://gbengasaolu.github.io/chinaflu2013/" target="_blank" rel="noopener">H7N9 ‘China Flu’ 2013 Outbreak Analysis</a></h3>
+                        <p><strong>Date:</strong> Feb 2024</p>
+                        <p><strong>Objective:</strong> To track cases, deaths, the basic reproduction number (R₀), and the geographic spread of the 2013 H7N9 influenza outbreak.</p>
+                        <p><strong>Skills &amp; Tools:</strong> Python, Plotly, Dash, Pandas</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dash_us_mortality.png" alt="US Mortality Surveillance Dashboard Screenshot">
+                    <div class="project-card-content">
+                        <h3><a href="https://gbengasaolu.github.io/dsu_wkds_analysis/#home" target="_blank" rel="noopener">US Mortality Surveillance Dashboard</a></h3>
+                        <p><strong>Date:</strong> Mar 2024</p>
+                        <p><strong>Objective:</strong> To visualize weekly all-cause and cause-specific excess deaths in the United States, providing a critical tool for CDC situational awareness.</p>
+                        <p><strong>Skills &amp; Tools:</strong> Python, Dash, CDC WONDER API</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dash_lifeexpectancies.png" alt="Life Expectancy × GDP Explorer Screenshot">
+                    <div class="project-card-content">
+                        <h3><a href="https://gbengasaolu.github.io/Gapminder_lifeexp_gdp/dahboard_final#home" target="_blank" rel="noopener">Life Expectancy × GDP Explorer</a></h3>
+                        <p><strong>Date:</strong> May 2024</p>
+                        <p><strong>Objective:</strong> To create animated plots and maps showing the relationship between life expectancy and GDP for 180 countries over time.</p>
+                        <p><strong>Skills &amp; Tools:</strong> R, ggplot2, Shiny</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <video src="https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dash_co2emmissions.mp4" autoplay loop muted playsinline aria-label="Video of CO₂ Emissions Interactive Dashboard"></video>
+                    <div class="project-card-content">
+                        <h3><a href="https://gbengasaolu.github.io/co2_emissions_demo/" target="_blank" rel="noopener">CO₂ Emissions Interactive Dashboard</a></h3>
+                        <p><strong>Date:</strong> Aug 2024</p>
+                        <p><strong>Objective:</strong> To analyze historical and projected carbon-emission trajectories by region and economic sector, providing insights into global climate change drivers.</p>
+                        <p><strong>Skills &amp; Tools:</strong> Python, Altair, Vega-Lite</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/gbengasaolu/onepager/main/dash_professionalgit.png" alt="Professional Profile on GitHub Pages Screenshot">
+                    <div class="project-card-content">
+                         <h3><a href="https://gbengasaolu.github.io/" target="_blank" rel="noopener">Professional Profile (GitHub Pages)</a></h3>
+                        <p><strong>Date:</strong> Jan 2023</p>
+                        <p><strong>Objective:</strong> To develop a comprehensive static personal website detailing research interests, a full list of publications, and past speaking engagements.</p>
+                        <p><strong>Skills &amp; Tools:</strong> R, Distill, GitHub Actions</p>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/gbengasaolu/onepager/main/dash_genAIportfolio.png" alt="Generative AI Playground & Chatbot Screenshot">
+                     <div class="project-card-content">
+                        <h3><a href="https://gbengasaolu.github.io/website/" target="_blank" rel="noopener">Generative AI Playground & Chatbot</a></h3>
+                        <p><strong>Date:</strong> Dec 2024</p>
+                        <p><strong>Objective:</strong> To prototype a demonstration website showing effective prompt-engineering patterns and an interactive GPT-powered chat interface.</p>
+                        <p><strong>Skills &amp; Tools:</strong> HTML5, CSS3, OpenAI API</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/gbengasaolu/onepager/main/dash_lifesatisfaction.png" alt="Analysis of Global Happiness Screenshot">
+                    <div class="project-card-content">
+                        <h3><a href="https://gbengasaolu.github.io/rmc_life_satisfaction_webpage_gb/" target="_blank" rel="noopener">Analysis of Global Happiness (2011–2023)</a></h3>
+                        <p><strong>Date:</strong> Apr 2024</p>
+                        <p><strong>Objective:</strong> To create an interactive replica of Our World in Data’s life-satisfaction charts, allowing users to explore global happiness trends.</p>
+                        <p><strong>Skills &amp; Tools:</strong> R, Shiny, Plotly</p>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://raw.githubusercontent.com/gbengasaolu/onepager/main/dash_gapminder2007.png" alt="Gapminder 2007 Country Comparison Screenshot">
+                    <div class="project-card-content">
+                        <h3><a href="https://gbengasaolu.github.io/gapminder_2007/gapminder_2007#home" target="_blank" rel="noopener">Gapminder 2007 Country Comparison</a></h3>
+                        <p><strong>Date:</strong> Sep 2024</p>
+                        <p><strong>Objective:</strong> To build a responsive Streamlit application for comparing countries based on GDP, life expectancy, and population data from 2007.</p>
+                        <p><strong>Skills &amp; Tools:</strong> Python, Streamlit</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="certificates">
+            <h2>Selected Certificates</h2>
+            <div class="certificate-grid">
+                <div class="certificate-link" data-src="https://raw.githubusercontent.com/gbengasaolu/onepager/main/Big%20Data%20Analysis%20Certification_Dr%20Asaolu.jpeg">Big Data Analysis – Data Lead Africa</div>
+                <div class="certificate-link" data-src="https://raw.githubusercontent.com/gbengasaolu/onepager/main/cert_accelebrate_eda.png">Exploratory Data Analysis in R – Accelebrate</div>
+                <div class="certificate-link" data-src="https://raw.githubusercontent.com/gbengasaolu/onepager/main/cert_accelebrate_ml.png">Machine Learning & Data Visualization – Accelebrate</div>
+                <div class="certificate-link" data-src="https://raw.githubusercontent.com/gbengasaolu/onepager/main/cert_graph_python.png">Python Programming – The GRAPH Network</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Olugbenga Asaolu. All rights reserved.</p>
+    </footer>
+
+    <div class="modal-overlay" id="certificateModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <img src="" alt="Certificate" id="modalImage" oncontextmenu="return false;">
         </div>
-    </header>
+    </div>
 
-    <section class="projects">
-        <h2>Projects</h2>
-        <div class="project-grid">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const modal = document.getElementById('certificateModal');
+            const modalImage = document.getElementById('modalImage');
+            const closeBtn = document.getElementById('modalClose');
             
-            <div class="project-card">
-                <img src="[https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dash_global_hiv.png](https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dash_global_hiv.png)" alt="Screenshot of Global HIV/AIDS Epidemiology Explorer dashboard showing world map and charts">
-                <div class="project-card-content">
-                    <h3><a href="[https://gbengasaolu.github.io/GLOBAL_HIV_AIDS_ANALYSIS/](https://gbengasaolu.github.io/GLOBAL_HIV_AIDS_ANALYSIS/)" target="_blank" rel="noopener noreferrer">Global HIV/AIDS Epidemiology Explorer</a></h3>
-                    <p><strong>Date:</strong> Jul 2024</p>
-                    <p><strong>Objective:</strong> To visualize critical HIV/AIDS epidemiological trends, including prevalence, incidence, and treatment coverage, on a regional and global scale.</p>
-                    <p><strong>Skills &amp; Tools:</strong> R, Leaflet, Plotly</p>
-                </div>
-            </div>
+            document.querySelectorAll('.certificate-link').forEach(link => {
+                link.addEventListener('click', function() {
+                    const imgSrc = this.getAttribute('data-src');
+                    modalImage.src = imgSrc;
+                    modal.style.display = 'flex';
+                });
+            });
+
+            function closeModal() {
+                modal.style.display = 'none';
+                modalImage.src = ''; // Clear image src
+            }
+
+            closeBtn.addEventListener('click', closeModal);
             
-            <div class="project-card">
-                <img src="[https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dash_china_influenza.png](https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dash_china_influenza.png)" alt="Screenshot of H7N9 ‘China Flu’ 2013 Outbreak Analysis showing epidemic curve and map">
-                <div class="project-card-content">
-                    <h3><a href="[https://gbengasaolu.github.io/chinaflu2013/](https://gbengasaolu.github.io/chinaflu2013/)" target="_blank" rel="noopener noreferrer">H7N9 ‘China Flu’ 2013 Outbreak Analysis</a></h3>
-                    <p><strong>Date:</strong> Feb 2024</p>
-                    <p><strong>Objective:</strong> To track cases, deaths, the basic reproduction number (R₀), and the geographic spread of the 2013 H7N9 influenza outbreak using historical data.</p>
-                    <p><strong>Skills &amp; Tools:</strong> Python, Plotly, Dash, Pandas</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="[https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dash_us_mortality.png](https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dash_us_mortality.png)" alt="Screenshot of US Mortality Surveillance Dashboard showing excess death charts">
-                <div class="project-card-content">
-                    <h3><a href="[https://gbengasaolu.github.io/dsu_wkds_analysis/#home](https://gbengasaolu.github.io/dsu_wkds_analysis/#home)" target="_blank" rel="noopener noreferrer">US Mortality Surveillance Dashboard</a></h3>
-                    <p><strong>Date:</strong> Mar 2024</p>
-                    <p><strong>Objective:</strong> To visualize weekly all-cause and cause-specific excess deaths in the United States, providing a critical tool for CDC situational awareness.</p>
-                    <p><strong>Skills &amp; Tools:</strong> Python, Dash, CDC WONDER API</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="[https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dash_lifeexpectancies.png](https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dash_lifeexpectancies.png)" alt="Screenshot of Life Expectancy × GDP Explorer showing an animated bubble plot">
-                <div class="project-card-content">
-                    <h3><a href="[https://gbengasaolu.github.io/Gapminder_lifeexp_gdp/dahboard_final#home](https://gbengasaolu.github.io/Gapminder_lifeexp_gdp/dahboard_final#home)" target="_blank" rel="noopener noreferrer">Life Expectancy × GDP Explorer</a></h3>
-                    <p><strong>Date:</strong> May 2024</p>
-                    <p><strong>Objective:</strong> To create animated bubble plots and interactive maps showing the complex relationship between life expectancy and GDP for 180 countries over time.</p>
-                    <p><strong>Skills &amp; Tools:</strong> R, ggplot2, Shiny</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <video src="[https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dash_co2emmissions.mp4](https://raw.githubusercontent.com/gbengasaolu/eportfolio/main/dash_co2emmissions.mp4)" autoplay loop muted playsinline aria-label="Video of CO₂ Emissions Interactive Dashboard"></video>
-                <div class="project-card-content">
-                    <h3><a href="[https://gbengasaolu.github.io/co2_emissions_demo/](https://gbengasaolu.github.io/co2_emissions_demo/)" target="_blank" rel="noopener noreferrer">CO₂ Emissions Interactive Dashboard</a></h3>
-                    <p><strong>Date:</strong> Aug 2024</p>
-                    <p><strong>Objective:</strong> To analyze historical and projected carbon-emission trajectories by region and economic sector, providing insights into global climate change drivers.</p>
-                    <p><strong>Skills &amp; Tools:</strong> Python, Altair, Vega-Lite</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="[https://raw.githubusercontent.com/gbengasaolu/onepager/main/dash_professionalgit.png](https://raw.githubusercontent.com/gbengasaolu/onepager/main/dash_professionalgit.png)" alt="Screenshot of Professional Profile GitHub Pages website">
-                <div class="project-card-content">
-                    <h3><a href="[https://gbengasaolu.github.io/](https://gbengasaolu.github.io/)" target="_blank" rel="noopener noreferrer">Professional Profile (GitHub Pages)</a></h3>
-                    <p><strong>Date:</strong> Jan 2023</p>
-                    <p><strong>Objective:</strong> To develop a comprehensive static personal website detailing research interests, a full list of publications, and past speaking engagements.</p>
-                    <p><strong>Skills &amp; Tools:</strong> R, Distill, GitHub Actions</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="[https://raw.githubusercontent.com/gbengasaolu/onepager/main/dash_genAIportfolio.png](https://raw.githubusercontent.com/gbengasaolu/onepager/main/dash_genAIportfolio.png)" alt="Screenshot of Generative AI Playground & Chatbot interface">
-                <div class="project-card-content">
-                    <h3><a href="[https://gbengasaolu.github.io/website/](https://gbengasaolu.github.io/website/)" target="_blank" rel="noopener noreferrer">Generative AI Playground & Chatbot</a></h3>
-                    <p><strong>Date:</strong> Dec 2024</p>
-                    <p><strong>Objective:</strong> To prototype a demonstration website showing effective prompt-engineering patterns and an interactive GPT-powered chat interface using the OpenAI API.</p>
-                    <p><strong>Skills &amp; Tools:</strong> HTML5, CSS3, OpenAI API</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="[https://raw.githubusercontent.com/gbengasaolu/onepager/main/dash_lifesatisfaction.png](https://raw.githubusercontent.com/gbengasaolu/onepager/main/dash_lifesatisfaction.png)" alt="Screenshot of Analysis of Global Happiness dashboard">
-                <div class="project-card-content">
-                    <h3><a href="[https://gbengasaolu.github.io/rmc_life_satisfaction_webpage_gb/](https://gbengasaolu.github.io/rmc_life_satisfaction_webpage_gb/)" target="_blank" rel="noopener noreferrer">Analysis of Global Happiness (2011–2023)</a></h3>
-                    <p><strong>Date:</strong> Apr 2024</p>
-                    <p><strong>Objective:</strong> To create an interactive replica of Our World in Data’s life-satisfaction charts, allowing users to explore global happiness trends over a decade.</p>
-                    <p><strong>Skills &amp; Tools:</strong> R, Shiny, Plotly</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="[https://raw.githubusercontent.com/gbengasaolu/onepager/main/dash_gapminder2007.png](https://raw.githubusercontent.com/gbengasaolu/onepager/main/dash_gapminder2007.png)" alt="Screenshot of Gapminder 2007 Country Comparison application">
-                <div class="project-card-content">
-                    <h3><a href="[https://gbengasaolu.github.io/gapminder_2007/gapminder_2007#home](https://gbengasaolu.github.io/gapminder_2007/gapminder_2007#home)" target="_blank" rel="noopener noreferrer">Gapminder 2007 Country Comparison</a></h3>
-                    <p><strong>Date:</strong> Sep 2024</p>
-                    <p><strong>Objective:</strong> To build a responsive Streamlit application for comparing countries based on GDP, life expectancy, and population data from the year 2007.</p>
-                    <p><strong>Skills &amp; Tools:</strong> Python, Streamlit</p>
-                </div>
-            </div>
-
-            </div>
-    </section>
-
-    <section class="certificates">
-        <h2>Selected Certificates</h2>
-        <div class="certificate-grid">
-            <div class="certificate-item">
-                <img class="view-only-cert" src="[https://raw.githubusercontent.com/gbengasaolu/onepager/main/Big%20Data%20Analysis%20Certification_Dr%20Asaolu.jpeg](https://raw.githubusercontent.com/gbengasaolu/onepager/main/Big%20Data%20Analysis%20Certification_Dr%20Asaolu.jpeg)" alt="Big Data Analysis Certificate from Data Lead Africa">
-            </div>
-             <div class="certificate-item">
-                <img class="view-only-cert" src="[https://raw.githubusercontent.com/gbengasaolu/onepager/main/cert_accelebrate_eda.png](https://raw.githubusercontent.com/gbengasaolu/onepager/main/cert_accelebrate_eda.png)" alt="Exploratory Data Analysis in R Certificate from Accelebrate">
-            </div>
-             <div class="certificate-item">
-                <img class="view-only-cert" src="[https://raw.githubusercontent.com/gbengasaolu/onepager/main/cert_accelebrate_ml.png](https://raw.githubusercontent.com/gbengasaolu/onepager/main/cert_accelebrate_ml.png)" alt="Machine Learning & Data Visualization Certificate from Accelebrate">
-            </div>
-             <div class="certificate-item">
-                <img class="view-only-cert" src="[https://raw.githubusercontent.com/gbengasaolu/onepager/main/cert_graph_python.png](https://raw.githubusercontent.com/gbengasaolu/onepager/main/cert_graph_python.png)" alt="Python Programming Certificate from The GRAPH Network">
-            </div>
-        </div>
-    </section>
-
-</main>
-
-<footer>
-    <p>&copy; 2025 Olugbenga Asaolu. All rights reserved.</p>
-</footer>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const certs = document.querySelectorAll('.view-only-cert');
-        certs.forEach(cert => {
-            cert.addEventListener('contextmenu', function(e) {
-                e.preventDefault();
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    closeModal();
+                }
             });
         });
-    });
-</script>
-```
+    </script>
 
-\</body\>
-\</html\>
+</body>
+</html>
